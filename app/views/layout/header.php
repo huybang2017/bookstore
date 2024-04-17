@@ -41,64 +41,6 @@
             scroll-behavior: smooth;
         }
 
-        html::-webkit-scrollbar {
-            width: 1rem;
-        }
-
-        html::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        html::-webkit-scrollbar-thumb {
-            background: var(--black);
-        }
-
-        section {
-            padding: 5rem 9%;
-        }
-
-        .heading {
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .heading::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 0.01rem;
-            background: rgba(0, 0, 0, 0.1);
-            z-index: -1;
-        }
-
-        .heading span {
-            font-size: 3rem;
-            padding: 0.5rem 2rem;
-            color: var(--black);
-            background: #fff;
-            border: var(--border);
-        }
-
-        .btn {
-            margin-top: 1rem;
-            display: inline-block;
-            padding: 0.9rem 3rem;
-            border-radius: 0.5rem;
-            color: #fff;
-            background: var(--green);
-            font-size: 1.7rem;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        .btn:hover {
-            background: var(--dark-color);
-        }
-
         .header {
             position: fixed;
             top: 0;
@@ -178,7 +120,7 @@
 <body>
     <div class="header">
         <div class="header-1">
-            <a href="#" class="logo"> <i class="fas fa-book"></i> Books4MU </a>
+            <a href="/bookstore/app/views/page/home/homepage.php" class="logo"> <i class="fas fa-book"></i> Books4MU </a>
         </div>
     </div>
 </body>
