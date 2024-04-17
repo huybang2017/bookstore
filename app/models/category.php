@@ -1,5 +1,6 @@
 <?php
-require_once "/opt/lampp/htdocs/web2_Project/src/config/MysqlConfig.php";
+require_once "/opt/lampp/htdocs/bookstore/config/config.php";
+
 
 class Category
 {
