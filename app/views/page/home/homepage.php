@@ -163,11 +163,11 @@ require_once '/opt/lampp/htdocs/bookstore/app/views/page/home/loadData.php';
             <h1 class="heading"> <span>featured books</span> </h1>
             <div class="swiper featured-slider">
                 <div class="swiper-wrapper">
-                    <?php foreach ($dataProduct as $product) : ?>
+                    <?php foreach ($dataProducts->data as $product) : ?>
                         <div class="swiper-slide box">
                             <div class="image">
                                 <a href="/bookstore/app/views/page/detailProduct/detailProduct.php?productID=<?php echo $product['ProductID']; ?>"><img src="https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/book-1.png" alt=""></a>
-                                <a href="#" class="addFavorite">
+                                <a href="" class="addFavorite">
                                     <i class="fa-solid fa-heart"></i>
                                 </a>
                             </div>
