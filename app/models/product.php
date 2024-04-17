@@ -53,7 +53,20 @@ class Product
             $statement = $this->db->prepare($query);
             $statement->execute();
 
-            return $statement->fetchAll(PDO::FETCH_ASSOC);
+            $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            if ($products) {
+                return ((object) [
+                    "status" => 200,
+                    "message" => "Success",
+                    "data" => $products
+                ]);
+            } else {
+                return ((object) [
+                    "status" => 404,
+                    "message" => "No products found",
+                ]);
+            }
         } catch (\Throwable $th) {
             return (object) [
                 "status" => 400,
@@ -65,6 +78,7 @@ class Product
             }
         }
     }
+
 
     public function getProductQuantity()
     {
@@ -74,7 +88,20 @@ class Product
             $statement = $this->db->prepare($query);
             $statement->execute();
 
-            return $statement->fetchAll(PDO::FETCH_ASSOC);
+            $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            if ($products) {
+                return ((object) [
+                    "status" => 200,
+                    "message" => "Success",
+                    "data" => $products
+                ]);
+            } else {
+                return ((object) [
+                    "status" => 404,
+                    "message" => "No products with quantity greater than 0 found",
+                ]);
+            }
         } catch (\Throwable $th) {
             return (object) [
                 "status" => 400,
@@ -86,6 +113,7 @@ class Product
             }
         }
     }
+
 
 
     public function getProductById($productID)
@@ -97,18 +125,32 @@ class Product
             $statement->bindParam(':productID', $productID);
             $statement->execute();
 
-            return $statement->fetch(PDO::FETCH_ASSOC);
+            $product = $statement->fetch(PDO::FETCH_ASSOC);
+            if ($product) {
+                return ((object) [
+                    "status" => 200,
+                    "message" => "Thành công",
+                    "data" => $product
+                ]);
+            } else {
+                return ((object) [
+                    "status" => 404,
+                    "message" => "Không tìm thấy sản phẩm",
+                ]);
+            }
         } catch (\Throwable $th) {
             return (object) [
                 "status" => 400,
                 "message" => "Error: " . $th->getMessage()
             ];
         } finally {
+            // Đóng kết nối với cơ sở dữ liệu
             if ($this->db) {
                 $this->db = null;
             }
         }
     }
+
 
     public function updateProduct($productID, $productName, $description, $price, $stockQuantity)
     {
