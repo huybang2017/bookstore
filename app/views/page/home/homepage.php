@@ -12,7 +12,8 @@ require_once '/opt/lampp/htdocs/bookstore/app/views/page/home/loadData.php';
 
         <!-- font awesome cdn link  -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!-- custom css file link  -->
         <link rel="stylesheet" href="../../../../asset/css/homepage.css">
     </head>
@@ -34,14 +35,14 @@ require_once '/opt/lampp/htdocs/bookstore/app/views/page/home/loadData.php';
 
                 <div class="icons">
                     <div id="search-btn" class="fas fa-search"></div>
-                    <a href="./cart.html" class="fas fa-shopping-cart"></a>
-                    <div id="login-btn" class="fas fa-user"></div>
+                    <a type="button" class="fas fa-shopping-cart" data-bs-toggle="modal" data-bs-target="#cart"></a>
+                    <a href="/bookstore/app/views/page/signIn/signIn.php" id="login-btn" class="fas fa-user"></a>
                 </div>
 
             </div>
 
             <div class="header-2">
-                <nav class="navbar">
+                <nav class="navbarHeader-2">
                     <a href="./index.html">home</a>
                     <a href="#featured">featured</a>
                     <a href="#">category</a>
@@ -63,28 +64,24 @@ require_once '/opt/lampp/htdocs/bookstore/app/views/page/home/loadData.php';
             <a href="#reviews" class="fas fa-comments"></a>
             <a href="#feedback" class="fas fa-feedback"></a>
         </nav>
+        <!-- cart -->
 
-        <!-- login form  -->
-
-        <div class="login-form-container">
-
-            <div id="close-login-btn" class="fas fa-times"></div>
-
-            <form action="">
-                <h3>sign in</h3>
-                <span>username</span>
-                <input type="email" name="" class="box" placeholder="enter your email" id="">
-                <span>password</span>
-                <input type="password" name="" class="box" placeholder="enter your password" id="">
-                <div class="checkbox">
-                    <input type="checkbox" name="" id="remember-me">
-                    <label for="remember-me"> remember me</label>
+        <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-3" id="exampleModalLabel">CART</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                        <button type="button" class="btn btn-primary">CHECKOUT</button>
+                    </div>
                 </div>
-                <input type="submit" value="sign in" class="btn">
-                <p>forget password ? <a href="#">click here</a></p>
-                <p>don't have an account ? <a href="#">create one</a></p>
-            </form>
-
+            </div>
         </div>
 
         <!-- home section starts  -->
@@ -481,6 +478,9 @@ require_once '/opt/lampp/htdocs/bookstore/app/views/page/home/loadData.php';
         </section>
 
         <!-- footer section ends -->
+
+        <!-- bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <!-- custom js file link  -->
         <script src="../../../../asset/js/homepage.js"></script>
     </body>
