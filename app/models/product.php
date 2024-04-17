@@ -118,7 +118,25 @@ class Product
 
     public function getProductById($productID)
     {
-        $query = "SELECT * FROM Products WHERE ProductID = :productID";
+        $query = "SELECT 
+            Products.ProductID, 
+            Products.ProductName, 
+            Products.Description, 
+            Products.Price, 
+            Products.StockQuantity, 
+            Products.AuthorID, 
+            Authors.AuthorName, 
+            Categories.CategoryID,
+            Categories.CategoryName
+        FROM 
+            Products
+        JOIN 
+            Authors ON Products.AuthorID = Authors.AuthorID
+        JOIN 
+            Categories ON Products.CategoryID = Categories.CategoryID
+        WHERE 
+            Products.ProductID = :productID;";
+
 
         try {
             $statement = $this->db->prepare($query);
