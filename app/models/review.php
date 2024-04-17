@@ -46,7 +46,7 @@ class Review
         }
     }
 
-    public function readReview($reviewID)
+    public function getReviewByID($reviewID)
     {
         $query = "SELECT * FROM Reviews WHERE ReviewID = :reviewID";
 
