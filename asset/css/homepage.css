@@ -42,7 +42,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 section {
-    padding: 5rem 9%;
+    padding: 13rem 9%;
 }
 
 .heading {
@@ -165,18 +165,18 @@ section {
     background: var(--green);
 }
 
-.header .header-2 .navbar {
+.header .header-2 .navbarHeader-2 {
     text-align: center;
 }
 
-.header .header-2 .navbar a {
+.header .header-2 .navbarHeader-2 a {
     color: #fff;
     display: inline-block;
     padding: 1.2rem;
     font-size: 1.7rem;
 }
 
-.header .header-2 .navbar a:hover {
+.header .header-2 .navbarHeader-2 a:hover {
     background: var(--dark-color);
 }
 
