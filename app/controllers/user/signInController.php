@@ -15,6 +15,8 @@ function handleLogin($username, $password)
 
             if ($password === $validPassword) {
                 $_SESSION['username'] = $username;
+                $_SESSION['password'] = $password;
+                $_SESSION['userID'] = $userID;
                 return array("status" => 200, "message" => "Đăng nhập thành công.", "data" => array("username" => $username, "password" => $password));
             } else {
                 return array("status" => 400, "message" => "Tên người dùng hoặc mật khẩu không chính xác.");
