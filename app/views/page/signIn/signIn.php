@@ -52,8 +52,8 @@ require_once '/opt/lampp/htdocs/bookstore/app/views/layout/header.php';
                 data: formData,
                 success: (response) => {
                     console.log(response);
-                    console.log(response.data.username); // Lấy username từ response
-                    console.log(response.data.password); // Lấy password từ response
+                    console.log(response.data?.username); // Lấy username từ response
+                    console.log(response.data?.password); // Lấy password từ response
                     if (response.status === 200) {
                         if (rememberPassword) { // Nếu đã chọn Remember Password
                             // Lưu username và password vào cookie
