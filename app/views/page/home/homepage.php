@@ -26,7 +26,7 @@ require_once '/opt/lampp/htdocs/bookstore/app/views/page/home/loadData.php';
 
             <div class="header-1">
 
-                <a href="#" class="logo"> <i class="fas fa-book"></i> Books4MU </a>
+                <a href="" class="logo"> <i class="fas fa-book"></i> Books4MU </a>
 
                 <form action="" class="search-form">
                     <input type="search" name="" placeholder="search here..." id="search-box">
@@ -179,6 +179,19 @@ require_once '/opt/lampp/htdocs/bookstore/app/views/page/home/loadData.php';
             </div>
         </section>
 
+
+        <!-- pagination product -->
+        <div class="pagination_page">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
         <!-- featured section ends -->
 
         <!-- newsletter section starts -->
