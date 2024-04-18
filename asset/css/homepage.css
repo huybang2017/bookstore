@@ -162,54 +162,6 @@ section {
     display: none;
 }
 
-.header .header-2 {
-    background: var(--green);
-}
-
-.header .header-2 .navbarHeader-2 {
-    text-align: center;
-}
-
-.header .header-2 .navbarHeader-2 a {
-    color: #fff;
-    display: inline-block;
-    padding: 1.2rem;
-    font-size: 1.7rem;
-}
-
-.header .header-2 .navbarHeader-2 a:hover {
-    background: var(--dark-color);
-}
-
-.header .header-2.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.bottom-navbar {
-    text-align: center;
-    background: var(--green);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    display: none;
-}
-
-.bottom-navbar a {
-    font-size: 2.5rem;
-    padding: 2rem;
-    color: #fff;
-}
-
-.bottom-navbar a:hover {
-    background: var(--dark-color);
-}
-
 .login-form-container {
     display: flex;
     align-items: center;
@@ -299,6 +251,87 @@ section {
     color: var(--black);
     cursor: pointer;
 }
+
+.loginSuccess img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.loginSuccess button {
+    margin-top: 0 !important;
+    border-radius: 100% !important;
+    padding: 0;
+}
+
+.loginSuccess .dropdown-item {
+    padding-top: 10px !important;
+    font-size: 1.8rem !important;
+    margin: 0 !important;
+}
+
+.loginSuccess .dropdown-item i {
+    margin-right: 10px;
+}
+
+/* modal cart */
+.cd-cart__product {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    /* Add border bottom to separate products */
+}
+
+.cd-cart__image {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.cd-cart__image img {
+    width: 100%;
+    height: auto;
+}
+
+.cd-cart__details {
+    flex-grow: 1;
+}
+
+.cd-cart__details h3 {
+    margin: 0;
+}
+
+.cd-cart__price {
+    margin: 0;
+}
+
+.cd-cart__actions {
+    display: flex;
+    align-items: center;
+}
+
+.cd-cart__delete-item {
+    background-color: #ff6347;
+    /* Red color for delete button */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.cd-cart__quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cd-cart__quantity label {
+    margin-right: 5px;
+}
+
 
 .home {
     background: url(https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/banner-bg.jpg) no-repeat;
@@ -818,10 +851,6 @@ section {
 
     body {
         padding-bottom: 6rem;
-    }
-
-    .header .header-2 {
-        display: none;
     }
 
     .bottom-navbar {
