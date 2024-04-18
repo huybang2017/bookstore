@@ -1,19 +1,15 @@
-const messageSuccess = () => {
+function showSuccessAlert() {
     Swal.fire({
-        icon: "success",
-        title: "Success",
-        text: "Your favorite has been added successfully",
-        showConfirmButton: false,
-        timer: 1500,
+        icon: 'success',
+        title: 'Thành công!',
+        text: 'Xử lý thành công.',
     });
-};
+}
 
-const messageError = () => {
+function showErrorAlert(message) {
     Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "Something went wrong",
-        showConfirmButton: false,
-        timer: 1500,
+        icon: 'error',
+        title: 'Lỗi!',
+        text: message,
     });
 }
