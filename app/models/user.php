@@ -88,6 +88,50 @@ class User
         }
     }
 
+    // Method to get user by email
+    public function getUserByEmail($email)
+    {
+        $query = "SELECT * FROM Users WHERE Email = :email";
+
+        try {
+            $statement = $this->db->prepare($query);
+            $statement->bindParam(':email', $email);
+            $statement->execute();
+            $user = $statement->fetch(PDO::FETCH_ASSOC);
+            return (object) [
+                "status" => 200,
+                "data" => $user
+            ];
+        } catch (\Throwable $th) {
+            return (object) [
+                "status" => 400,
+                "message" => "Error: " . $th->getMessage()
+            ];
+        }
+    }
+
+    // Method to get user by username
+    public function getUserByUsername($username)
+    {
+        $query = "SELECT * FROM Users WHERE Username = :username";
+
+        try {
+            $statement = $this->db->prepare($query);
+            $statement->bindParam(':username', $username);
+            $statement->execute();
+            $user = $statement->fetch(PDO::FETCH_ASSOC);
+            return (object) [
+                "status" => 200,
+                "data" => $user
+            ];
+        } catch (\Throwable $th) {
+            return (object) [
+                "status" => 400,
+                "message" => "Error: " . $th->getMessage()
+            ];
+        }
+    }
+
     // Lấy người dùng theo RoleID
     public function getProductsByRoleID($roleID)
     {
