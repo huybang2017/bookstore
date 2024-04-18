@@ -132,6 +132,29 @@ class User
         }
     }
 
+    public function getPasswordById($userID)
+    {
+        $query = "SELECT Password FROM Users WHERE UserID = :userID";
+
+        try {
+            $statement = $this->db->prepare($query);
+            $statement->bindParam(':userID', $userID);
+            $statement->execute();
+            $password = $statement->fetchColumn(); // Lấy cột Password từ kết quả truy vấn
+            return (object) [
+                "status" => 200,
+                "data" => $password
+            ];
+        } catch (\Throwable $th) {
+            return (object) [
+                "status" => 400,
+                "message" => "Error: " . $th->getMessage()
+            ];
+        }
+    }
+
+
+
     // Lấy người dùng theo RoleID
     public function getProductsByRoleID($roleID)
     {
