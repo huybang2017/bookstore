@@ -43,6 +43,7 @@ html::-webkit-scrollbar-thumb {
 
 section {
     padding: 13rem 9%;
+    padding-bottom: 25px;
 }
 
 .heading {
@@ -521,6 +522,21 @@ section {
     color: #fff;
     text-align: center;
     text-decoration: none;
+}
+
+.pagination_page {
+    padding-bottom: 25px;
+}
+
+.page-link {
+    font-size: 20px !important;
+    padding: 3px 10px;
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.page-item:hover .page-link {
+    color: black;
 }
 
 .newsletter {
